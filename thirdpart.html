@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus第三方共享信息清单</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .update-date {
+            text-align: center;
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #000;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #000;
+            margin: 25px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #000;
+        }
+
+        .third-party-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .third-party-item h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .info-detail {
+            margin: 10px 0;
+            color: #000;
+        }
+
+        .info-detail strong {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .info-detail a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        .info-detail a:hover {
+            color: #666;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            margin-top: 0;
+            color: #000;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .contact-email {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Campus第三方共享信息清单</h1>
+        <div class="update-date">更新日期：2025年8月1日</div>
+
+        <div class="third-party-item">
+            <h4>1. 地图SDK</h4>
+            <div class="info-detail"><strong>公司名称：</strong>高德软件有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>设备标识信息（IDFA、OAID）、设备参数及系统信息（设备品牌及型号、操作系统、屏幕分辨率、运营商信息）、当前应用信息（应用名、应用版本号）、地理位置信息、传感器信息（矢量、加速度、压力、方向、地磁）、网络状态信息（IP 地址、GNSS 信息、网络类型、SSID、BSSID、WiFi 状态、WiFi 参数、WiFi 列表、WiFi 信号强度的信息、基站信息）</div>
+            <div class="info-detail"><strong>使用目的：</strong>用于展示地图、定位、行程及规划路线</div>
+            <div class="info-detail"><strong>使用场景：</strong>首页地图、选择地点页、内容详情页</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK 本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://lbs.amap.com/pages/privacy/" target="_blank">https://lbs.amap.com/pages/privacy/</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>2. 微信OpenSDK Android</h4>
+            <div class="info-detail"><strong>公司名称：</strong>深圳市腾讯计算机系统有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>无</div>
+            <div class="info-detail"><strong>使用目的：</strong>支持微信分享</div>
+            <div class="info-detail"><strong>使用场景：</strong>使用微信分享场景</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://open.weixin.qq.com/cgi-bin/frame?t=news/protocol_developer_tmpl" target="_blank">https://open.weixin.qq.com/cgi-bin/frame?t=news/protocol_developer_tmpl</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>3. 腾讯云</h4>
+            <div class="info-detail"><strong>公司名称：</strong>腾讯云计算（北京）有限责任公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>音视频信息、地理位置、网络信息、读取存储（相册、媒体和其他文件）权限</div>
+            <div class="info-detail"><strong>使用目的：</strong>用于内容发布、图片/视频/语音类消息上传</div>
+            <div class="info-detail"><strong>使用场景：</strong>内容发布</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://cloud.tencent.com/document/product/301/11470" target="_blank">https://cloud.tencent.com/document/product/301/11470</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>4. Bugly Android</h4>
+            <div class="info-detail"><strong>公司名称：</strong>深圳市腾讯计算机系统有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>手机型号、手机品牌、系统版本、API等级、厂商系统版本、CPU架构类型、设备状态、SD卡信息、内存空间、网络类型、应用当前正在运行的进程名和PID</div>
+            <div class="info-detail"><strong>使用目的：</strong>性能监测</div>
+            <div class="info-detail"><strong>使用场景：</strong>性能监测</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://privacy.qq.com/document/preview/fc748b3d96224fdb825ea79e132c1a56" target="_blank">https://privacy.qq.com/document/preview/fc748b3d96224fdb825ea79e132c1a56</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>5. OPPO PUSH 客户端SDK</h4>
+            <div class="info-detail"><strong>公司名称：</strong>OPPO广东移动通信有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>应用基本信息（MCS应用包名、应用版本号、OPUSH SDK版本号），应用包名，应用内设备标识符（RegistraterID、appKey、appSecret）</div>
+            <div class="info-detail"><strong>使用目的：</strong>消息推送服务</div>
+            <div class="info-detail"><strong>使用场景：</strong>消息推送</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://open.oppomobile.com/new/developmentDoc/info?id=11228" target="_blank">https://open.oppomobile.com/new/developmentDoc/info?id=11228</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>6. smsdk</h4>
+            <div class="info-detail"><strong>公司名称：</strong>北京数美时代科技有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>必要个人信息：1. 设备基本信息，包括设备品牌、设备制造商、设备型号、设备名称、设备系统类型及版本信息、设备基本设置、设备环境；2. 设备标识信息，包括Android ID、OAID、IDFV（应用开发商标识符）、IDFA（广告标示符）；3. 设备网络信息，包括网络的接入形式、周边WIFI列表、网络运营商信息、网络连接状态；4. 设备应用信息，包括SDK宿主应用包名及版本号、运行中进程信息（仅获取当前进程名称）、传感器信息。可选个人信息：MAC地址、MediaDRM ID、软件列表、无线路由器标识（BSSID、SSID）及IP地址、粗略位置信息、精准位置信息、屏幕分辨率。</div>
+            <div class="info-detail"><strong>使用目的：</strong>用于风险控制和反欺诈，以保障账户和交易安全</div>
+            <div class="info-detail"><strong>使用场景：</strong>安全风控</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://www.ishumei.com/legal/cn/privacy.html" target="_blank">https://www.ishumei.com/legal/cn/privacy.html</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>7. vivo PUSH-SDK / Vivo推送SDK</h4>
+            <div class="info-detail"><strong>公司名称：</strong>维沃移动通信有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>应用基本信息（appid，appkey，应用包名，应用版本号，pushSDK版本）、应用内设备标识符（regid）、设备的硬件信息（设备类型）、系统基本信息（系统类型、系统版本）。</div>
+            <div class="info-detail"><strong>使用目的：</strong>提供推送消息服务、统计推送SDK接口调用成功率。</div>
+            <div class="info-detail"><strong>使用场景：</strong>用于OPPO手机的消息推送</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://dev.vivo.com.cn/documentCenter/doc/366" target="_blank">https://dev.vivo.com.cn/documentCenter/doc/366</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>8. 七牛 SDK</h4>
+            <div class="info-detail"><strong>公司名称：</strong>上海七牛信息技术有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>网络信息、地理位置、读取存储（相册、媒体和其他文件）权限</div>
+            <div class="info-detail"><strong>使用目的：</strong>用户发布内容</div>
+            <div class="info-detail"><strong>使用场景：</strong>用于发布内容</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://developer.qiniu.io/kodo/11868/the-sdk-privacy-policy" target="_blank">https://developer.qiniu.io/kodo/11868/the-sdk-privacy-policy</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>9. 地图SDK</h4>
+            <div class="info-detail"><strong>公司名称：</strong>高德软件有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>经纬度、设备信息【如IP 地址、GNSS信息、网络类型、WiFi状态、WiFi参数、WiFi列表、SSID、BSSID、基站信息、WiFi信号强度的信息传感器信息（矢量、加速度、压力、方向、地磁）、设备信号强度信息】、设备标识信息（IDFA、OAID）、当前应用信息（应用名、应用版本号）、设备参数及系统信息（设备品牌及型号、操作系统、运营商信息、屏幕分辨率）、搜索词</div>
+            <div class="info-detail"><strong>使用目的：</strong>为了实现地图展示、定位、搜索等服务</div>
+            <div class="info-detail"><strong>使用场景：</strong>展示地图</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://lbs.amap.com/pages/privacy/" target="_blank">https://lbs.amap.com/pages/privacy/</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>10. 定位SDK</h4>
+            <div class="info-detail"><strong>公司名称：</strong>高德软件有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>经纬度、设备信息【如IP 地址、GNSS信息、网络类型、WiFi状态、WiFi参数、WiFi列表、SSID、BSSID、基站信息、WiFi信号强度的信息传感器信息（矢量、加速度、压力、方向、地磁 、陀螺、温度、光敏、nema信号）、设备信号强度信息】、设备标识信息（IDFA、OAID）、当前应用信息（应用名、应用版本号）、设备参数及系统信息（设备品牌及型号、操作系统、运营商信息、屏幕分辨率）、出发地、到达地、搜索词</div>
+            <div class="info-detail"><strong>使用目的：</strong>为了实现向用户提供基于用户位置的导航服务、地图展示、定位、搜索服务</div>
+            <div class="info-detail"><strong>使用场景：</strong>展示导航</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://lbs.amap.com/pages/privacy/" target="_blank">https://lbs.amap.com/pages/privacy/</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>11. 小米推送</h4>
+            <div class="info-detail"><strong>公司名称：</strong>北京小米移动软件有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>设备信息【包括：设备型号、设备名称、SIM卡序列号、设备唯一标识符（IMEI、IMSI、Android ID、IDFA、OAID），以下同】、地理位置、网络信息、读取存储（相册、媒体和其他文件）权限</div>
+            <div class="info-detail"><strong>使用目的：</strong>消息推送服务</div>
+            <div class="info-detail"><strong>使用场景：</strong>用于小米手机的消息推送</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://dev.mi.com/console/doc/detail?pId=1822" target="_blank">https://dev.mi.com/console/doc/detail?pId=1822</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>12. 多线程库、性能加速库</h4>
+            <div class="info-detail"><strong>公司名称：</strong>华为软件技术有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>网络信息、地理位置、读取存储（相册、媒体和其他文件）权限、相机权限</div>
+            <div class="info-detail"><strong>使用目的：</strong>支持使用华为畅联功能进行分享</div>
+            <div class="info-detail"><strong>使用场景：</strong>使用华为畅联功能分享场景</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://developer.huawei.com/consumer/cn/doc/development/graphics-Guides/sdk-data-security-0000001050700772" target="_blank">https://developer.huawei.com/consumer/cn/doc/development/graphics-Guides/sdk-data-security-0000001050700772</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>13. 相机能力（Camera Engine）SDK</h4>
+            <div class="info-detail"><strong>公司名称：</strong>华为软件技术有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>相机信息、录音信息、位置信息</div>
+            <div class="info-detail"><strong>使用目的：</strong>相机录制过程中进行视频以及音频采集并获取用户大致位置用于生产照片、视频的位置信息</div>
+            <div class="info-detail"><strong>使用场景：</strong>内容发布</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://developer.huawei.com/consumer/cn/doc/development/Media-Guides/camerakit-sdk-data-security-00000020230915001" target="_blank">https://developer.huawei.com/consumer/cn/doc/development/Media-Guides/camerakit-sdk-data-security-00000020230915001</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>14. 腾讯地图SDK（Android）</h4>
+            <div class="info-detail"><strong>公司名称：</strong>深圳市腾讯计算机系统有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>网络类型、设备型号、手机屏幕密度、尺寸、操作系统及版本、IP地址 、OAID</div>
+            <div class="info-detail"><strong>使用目的：</strong>提供地图服务，帮助构建LBS应用程序</div>
+            <div class="info-detail"><strong>使用场景：</strong>提供地图服务，帮助构建LBS应用程序</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://privacy.qq.com/document/preview/a10a8634f237464da9a95f4f07e73e40" target="_blank">https://privacy.qq.com/document/preview/a10a8634f237464da9a95f4f07e73e40</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>15. 腾讯定位SDK（Android）</h4>
+            <div class="info-detail"><strong>公司名称：</strong>深圳市腾讯计算机系统有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>OAID、系统属性、操作系统及版本、设备型号、运营商基站信息、WIFI信息（WiFi状态、WIFI参数、附近的WIFI列表、连接的WIFI）、传感器信息（重力传感器、陀螺仪传感器 、加速度传感器 、磁场传感器 、旋转矢量传感器 ）、蓝牙信息、精确位置信息（GPS信息）、BSSID、SSID、位置服务获取、电话状态获取、网络运营商名称</div>
+            <div class="info-detail"><strong>使用目的：</strong>提供定位功能</div>
+            <div class="info-detail"><strong>使用场景：</strong>提供定位功能</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://privacy.qq.com/document/preview/dbd484ce652c486cb6d7e43ef12cefb0" target="_blank">https://privacy.qq.com/document/preview/dbd484ce652c486cb6d7e43ef12cefb0</a></div>
+        </div>
+
+        <div class="third-party-item">
+            <h4>16. 腾讯导航SDK（Android）</h4>
+            <div class="info-detail"><strong>公司名称：</strong>深圳市腾讯计算机系统有限公司</div>
+            <div class="info-detail"><strong>共享信息名称：</strong>OAID、系统属性、操作系统及版本、设备型号、运营商基站信息、WIFI信息（WiFi状态、WIFI参数、附近的WIFI列表、连接的WIFI）、传感器信息（重力传感器、陀螺仪传感器 、加速度传感器 、磁场传感器 、旋转矢量传感器 ）、蓝牙信息、精确位置信息（GPS信息）、BSSID、SSID、位置服务获取、电话状态获取、网络运营商名称</div>
+            <div class="info-detail"><strong>使用目的：</strong>提供导航功能</div>
+            <div class="info-detail"><strong>使用场景：</strong>提供导航功能</div>
+            <div class="info-detail"><strong>共享方式：</strong>SDK本机采集</div>
+            <div class="info-detail"><strong>第三方个人信息规则：</strong><a href="https://privacy.qq.com/document/preview/ba5687d1f4054fed8e108645255320f7" target="_blank">https://privacy.qq.com/document/preview/ba5687d1f4054fed8e108645255320f7</a></div>
+        </div>
+
+        <section id="contact">
+            <h2>联系我们</h2>
+            <div class="contact-info">
+                <h3>联系方式</h3>
+                <p>如您对本第三方共享信息清单有任何疑问，您可以通过以下方式联系我们：</p>
+                <p class="contact-email">support@thegoodcampus.com</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
