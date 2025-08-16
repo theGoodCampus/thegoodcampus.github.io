@@ -198,34 +198,54 @@
         
         <p><strong>2.13.设备权限调用汇总</strong></p>
         <p>当我们提供Campus平台服务时，会调用您的主要设备权限汇总如下。您可以在设备的设置功能中选择关闭部分或全部权限。在不同设备中，权限显示方式及关闭方式可能有所不同，具体请参考设备及系统开发方说明或指引：</p>
-        <p><strong>设备权限</strong></p>
-        <p><strong>对应业务功能</strong></p>
-        <p><strong>功能场景说明</strong></p>
-        <p><strong>是否可关闭</strong></p>
-        <p>麦克风（录音）</p>
-        <p>消息和聊天</p>
-        <p>与其他用户聊天时发送语音消息</p>
-        <p>可以，关闭后仅影响对应功能，不影响Campus平台其他功能</p>
-        <p>通知</p>
-        <p>系统通知</p>
-        <p>Campus平台相关消息推送</p>
-        <p>可以，关闭后仅影响对应功能，不影响Campus平台其他功能</p>
-        <p>网络权限</p>
-        <p>上网功能</p>
-        <p>开启上网功能，实时读取与更新</p>
-        <p>可以，关闭后Campus平台内容无法实时读取与更新，无法正常使用Campus平台</p>
-        <p>相机（摄像头）</p>
-        <p>1.注册认证 2.内容发布 3.扫一扫 4. 消息</p>
-        <p>1.注册和认证时进行拍摄 2.发布内容时进行拍摄 3.添加好友或活动相关二维码扫描 4. 与其他用户聊天时进行拍摄</p>
-        <p>可以，关闭后仅影响对应功能，不影响Campus平台其他功能</p>
-        <p>地理位置</p>
-        <p>1.注册认证 2.内容展示 3.内容发布 4.资料编辑 5.安全运行与风控验证</p>
-        <p>1. 根据用户所在位置展示学校校区信息 2.根据用户所在位置展示内容 3. 用户发布内容在添加校园点时，定位所在区域 4.个人页编辑学校校区 5.本政策第2.5条描述</p>
-        <p>可以，关闭后仅影响对应功能，不影响Campus平台其他功能</p>
-        <p>存储（相册、媒体和其他文件）</p>
-        <p>1.注册认证 2.内容发布 3.内容保存 4.消息 5.分享 6.资料编辑 7.扫一扫 8.安全运行与风控验证</p>
-        <p>1.认证时上传照片 2.发布内容时读取相册和媒体内容、进行存储 3.日志信息记录、信息缓存 4.消息：私信下载 5. 对生成分享图进行保存、分享 6.编辑资料选择头像图片时读取相册内容 7.添加好友或活动相关二维码扫描时读取相册内容 8.Campus平台安全运行与风控验证</p>
-        <p>可以，关闭后仅影响对应功能，不影响Campus平台其他功能</p>
+        <table style="width: 100%; margin: 20px 0;">
+            <thead>
+                <tr>
+                    <th style="text-align: left; padding: 10px; font-weight: bold;">设备权限</th>
+                    <th style="text-align: left; padding: 10px; font-weight: bold;">对应业务功能</th>
+                    <th style="text-align: left; padding: 10px; font-weight: bold;">功能场景说明</th>
+                    <th style="text-align: left; padding: 10px; font-weight: bold;">是否可关闭</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px;">麦克风（录音）</td>
+                    <td style="padding: 10px;">消息和聊天</td>
+                    <td style="padding: 10px;">与其他用户聊天时发送语音消息</td>
+                    <td style="padding: 10px;">可以，关闭后仅影响对应功能，不影响Campus平台其他功能</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">通知</td>
+                    <td style="padding: 10px;">系统通知</td>
+                    <td style="padding: 10px;">Campus平台相关消息推送</td>
+                    <td style="padding: 10px;">可以，关闭后仅影响对应功能，不影响Campus平台其他功能</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">网络权限</td>
+                    <td style="padding: 10px;">上网功能</td>
+                    <td style="padding: 10px;">开启上网功能，实时读取与更新</td>
+                    <td style="padding: 10px;">可以，关闭后Campus平台内容无法实时读取与更新，无法正常使用Campus平台</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">相机（摄像头）</td>
+                    <td style="padding: 10px;">1.注册认证 2.内容发布 3.扫一扫 4. 消息</td>
+                    <td style="padding: 10px;">1.注册和认证时进行拍摄 2.发布内容时进行拍摄 3.添加好友或活动相关二维码扫描 4. 与其他用户聊天时进行拍摄</td>
+                    <td style="padding: 10px;">可以，关闭后仅影响对应功能，不影响Campus平台其他功能</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">地理位置</td>
+                    <td style="padding: 10px;">1.注册认证 2.内容展示 3.内容发布 4.资料编辑 5.安全运行与风控验证</td>
+                    <td style="padding: 10px;">1. 根据用户所在位置展示学校校区信息 2.根据用户所在位置展示内容 3. 用户发布内容在添加校园点时，定位所在区域 4.个人页编辑学校校区 5.本政策第2.5条描述</td>
+                    <td style="padding: 10px;">可以，关闭后仅影响对应功能，不影响Campus平台其他功能</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">存储（相册、媒体和其他文件）</td>
+                    <td style="padding: 10px;">1.注册认证 2.内容发布 3.内容保存 4.消息 5.分享 6.资料编辑 7.扫一扫 8.安全运行与风控验证</td>
+                    <td style="padding: 10px;">1.认证时上传照片 2.发布内容时读取相册和媒体内容、进行存储 3.日志信息记录、信息缓存 4.消息：私信下载 5. 对生成分享图进行保存、分享 6.编辑资料选择头像图片时读取相册内容 7.添加好友或活动相关二维码扫描时读取相册内容 8.Campus平台安全运行与风控验证</td>
+                    <td style="padding: 10px;">可以，关闭后仅影响对应功能，不影响Campus平台其他功能</td>
+                </tr>
+            </tbody>
+        </table>
 
         <h3>3.征得授权同意的例外</h3>
         <p>根据相关法律法规的规定，在以下情形中，我们可以在不征得您的授权同意的情况下收集、使用一些必要的个人信息：</p>
