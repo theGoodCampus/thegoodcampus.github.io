@@ -3,7 +3,7 @@
         "apps": [],
         "details": [
             {
-                "appID": "CB54VU248U.com.kairuotu.campus",
+                "appIDs": [ "CB54VU248U.com.kairuotu.campus" ],
                 "paths": [
                     "/app/*"
                 ]
