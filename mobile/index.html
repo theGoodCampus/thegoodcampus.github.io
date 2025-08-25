@@ -39,13 +39,13 @@
                     </div>
                     <div class="logo-text-wrapper">
                         <img src="/images/logo-text.svg" alt="logo-text">
-                        <span class="logo-text">上Campus标记我的校园</span>
+                        <span class="logo-text">上 Campus APP 标记我的校园</span>
                     </div>
                 </div>
             </div>
             <div class="map-mask">
                 <img class="map"
-                    src="https://fe-platform.xhscdn.com/platform/104101l031ljlkb2v5m06ggic0g30k000000000qteomgs"
+                    src="https://fe-platform.xhscdn.com/platform/104101l031ljv6b96le06ggic0g30k000000000ufi721i"
                     alt="map">
             </div>
             <div class="map-mask-copy">
@@ -78,10 +78,10 @@
         <div class="about">
             <div class="about-big-text">About</div>
             <div class="about-content">
-                100 Ways to Explore Campus – From Study to Social.<br />Pin My Campus Life
+                100 Ways to Explore Campus – From Study to Social.<br />Pin My Campus Life.
             </div>
             <div class="about-description">
-                探索校园的100种可能-从学习到社交，从此不迷路。<br />用地图标记你的校园生活。
+                探索校园的100种可能-从课堂学习、校园活动到认识新朋友，从此不迷路。<br />用地图标记你的校园生活。
             </div>
             <div class="about-btn-wrapper">
                 <div class="about-btn" onclick="window.open(`https://static.tgccdn.com/apk/campus-release.apk`)">
@@ -120,7 +120,7 @@
         <div class="school-card">
             <div class="card-content">
                 <img class="card-img"
-                    src="https://fe-platform.xhscdn.com/platform/104101l031lg3rktj5m06ggic0g30k000000000q37mgeo"
+                    src="https://fe-platform.xhscdn.com/platform/104101l031lk127g25i06ggic0g30k000000000thj7mn8"
                     alt="card">
                 <div class="card-text">扫码下载 Campus</div>
                 <div class="card-text">领取你的校园卡</div>
@@ -152,6 +152,11 @@
     <script>
         let handleNext, handlePrev, handleScroll, handleMusicToggle
         window.onload = function () {
+            // 页面加载后自动滚动，触发地址栏隐藏
+            setTimeout(() => {
+                window.scrollTo(0, 1);
+            }, 100);
+
             const about = document.querySelector('.about')
             const card = document.querySelector('.school-card')
             const tailWrapper = document.querySelector('.tail-wrapper')

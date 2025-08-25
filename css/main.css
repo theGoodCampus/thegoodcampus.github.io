@@ -11,8 +11,8 @@ body {
 
 @font-face {
     font-family: 'Avenir';
-    src: url('/font/Avenir.ttc') format('truetype-collection'),
-        url('/font/Avenir.ttc') format('truetype');
+    src: url('/font/AvenirNext.ttc') format('truetype-collection'),
+        url('/font/AvenirNext.ttc') format('truetype');
     font-style: normal;
     font-display: swap;
     /* 优化字体加载性能 */
@@ -79,6 +79,12 @@ body {
     margin-top: 5px;
 }
 
+.app-text {
+    font-weight: 600;
+    font-size: 23px;
+    margin: 2.5px 0 0 8px;
+}
+
 .music-wrapper {
     display: flex;
     align-items: center;
@@ -90,6 +96,7 @@ body {
     height: 32px;
     border-radius: 50%;
     border: 2px solid #000;
+    z-index: 2;
 }
 
 .music {
@@ -99,7 +106,8 @@ body {
 .map-mask,
 .map-mask-copy {
     position: absolute;
-    width: 90%;
+    width: 87%;
+    max-width: 2000px;
     aspect-ratio: 4173/2103;
     bottom: 0;
     left: 50%;
@@ -173,8 +181,8 @@ body {
 .map-text {
     position: absolute;
     top: 0%;
-    right: 8%;
-    width: 20.37%;
+    right: 9%;
+    width: 18.37%;
 }
 
 /* 关于/学校卡 */
@@ -223,7 +231,7 @@ body {
     color: #000;
     font-size: 80px;
     font-style: normal;
-    font-weight: 900;
+    /* font-weight: 900; */
     line-height: normal;
     margin-top: 135px;
     letter-spacing: -1px;
@@ -234,7 +242,7 @@ body {
     padding: 0;
 }
 
-.about-left .logo .logo-image {
+/* .about-left .logo .logo-image {
     width: auto;
     height: auto;
     padding: 0;
@@ -248,17 +256,17 @@ body {
 .about-left .logo .logo-text img {
     width: 103px;
     height: auto;
-}
+} */
 
 .about-content {
     font-family: 'Avenir';
     color: #000;
     max-width: 1000px;
     font-size: 54px;
-    font-weight: bold;
+    font-weight: 100;
     font-style: italic;
     line-height: 60px;
-    /* letter-spacing: -1px; */
+    letter-spacing: -1px;
     margin-top: calc(220/824*100vh);
 }
 
