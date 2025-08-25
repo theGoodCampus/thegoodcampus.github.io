@@ -1,914 +1,223 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus - 探索校园的100种可能</title>
-    <link rel="icon" type="image/png" href="https://fe-platform.xhscdn.com/platform/104101l031kia0a9m2o06crss18r00000000000c6ettkq">
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="icon" type="image/png"
+        href="https://fe-platform.xhscdn.com/platform/104101l031kia0a9m2o06crss18r00000000000c6ettkq">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: #000;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Hero Section */
-.hero {
-    /* min-height: 80vh; */
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-container {
-    position: relative;
-    width: 100%;
-    /* height: 80vh; */
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.hero-background img {
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    object-position: center;
-}
-
-/* Left Section - Yellow Background */
-.hero-left {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 80vh;
-    background: linear-gradient(90deg, #F5EF24 0%, rgba(245, 239, 36, 0.8) 50%, rgba(245, 239, 36, 0) 100%);
-    display: flex;
-    flex-direction: column;
-    padding-left: 250px;
-}
-
-header {
-    padding: 40px 20px 0;
-    margin-left: 20px;
-    flex-shrink: 0;
-}
-
-.about-link {
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.header-line {
-    width: 100px;
-    height: 2px;
-    background: #000;
-}
-
-.hero-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 20px 40px;
-    margin-left: 20px;
-}
-
-.hero-content h1 {
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 30px;
-    color: #000;
-    max-width: 1000px;
-}
-
-.subtitle {
-    font-size: 1.3rem;
-    color: #333;
-    margin-bottom: 60px;
-    line-height: 1.6;
-    max-width: 1000px;
-}
-
-.download-buttons {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.download-btn {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 15px 30px;
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.download-btn img {
-    width: 20px;
-    height: 20px;
-}
-
-/* Campus Life Section */
-.campus-life {
-    background: #fff;
-    padding: 100px 0;
-}
-
-.section-content {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-}
-
-.section-content.reverse {
-    flex-direction: row-reverse;
-}
-
-.text-content {
-    flex: 1;
-}
-
-.text-content h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-.text-content p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.arrow-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background: #FFD700;
-    border-radius: 50%;
-    color: #000;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.arrow-icon:hover {
-    transform: translateX(5px);
-    background: #FFED4E;
-}
-
-.arrow-icon svg {
-    width: 24px;
-    height: 24px;
-}
-
-.phone-mockup {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-        .phone-frame {
-            width: 280px;
-            height: 560px;
-            background: #000;
-            border-radius: 30px;
-            padding: 8px;
-            position: relative;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    <link rel="stylesheet" href="/css/main.css">
+    <script>
+        // 移动端
+        if (window.innerWidth <= 768) {
+            window.location.href = `${window.location.origin}/mobile/index.html`;
         }
-
-        /* Phone mockup images */
-        .phone-mockup img {
-            width: 313px;
-            height: auto;
-            display: block;
-        }
-
-        .phone-mockup img.tall {
-            height: 643px;
-            width: 313px;
-        }
-
-.phone-screen {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border-radius: 22px;
-    overflow: hidden;
-    position: relative;
-}
-
-.phone-header {
-    background: #000;
-    color: #fff;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-}
-
-.phone-map {
-    position: relative;
-    width: 100%;
-    height: calc(100% - 50px);
-    background: linear-gradient(45deg, #f0f0f0 0%, #e0e0e0 100%);
-}
-
-.map-pin-small {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: #FFF933;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    border: 2px solid #fff;
-}
-
-/* Yellow Bar */
-.yellow-bar {
-    background: linear-gradient(90deg, #FFD700 0%, #FFED4E 50%, #FFD700 100%);
-    padding: 20px 0;
-    overflow: hidden;
-    /* margin-top: -150px; */
-}
-
-.campus-pattern {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    animation: scroll 20s linear infinite;
-    white-space: nowrap;
-}
-
-.campus-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #000;
-}
-
-.star {
-    font-size: 1rem;
-    color: #000;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
-/* Social Feed Section */
-.social-feed {
-    background: #fff;
-    padding: 100px 0;
-}
-
-.floating-emoji {
-    position: absolute;
-    font-size: 2rem;
-    z-index: 10;
-}
-
-.floating-emoji.left {
-    top: -20px;
-    left: -20px;
-}
-
-.floating-emoji.right {
-    top: 20px;
-    right: -20px;
-}
-
-.social-post {
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.post-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.profile-pic {
-    width: 40px;
-    height: 40px;
-    background: #FFF933;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-}
-
-.username {
-    font-weight: 600;
-    color: #000;
-}
-
-.post-image {
-    flex: 1;
-    background: #f0f0f0;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.cat-image {
-    font-size: 3rem;
-}
-
-.post-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.comments {
-    font-size: 14px;
-    color: #666;
-}
-
-.post-actions {
-    display: flex;
-    gap: 15px;
-}
-
-.action-icon {
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-/* Profile Section */
-.profile-section {
-    background: #FFF933;
-    padding: 100px 0;
-}
-
-.profile-content {
-    padding: 20px;
-    height: 100%;
-}
-
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.profile-pic-large {
-    width: 60px;
-    height: 60px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    border: 3px solid #000;
-}
-
-.profile-info h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.personality {
-    background: #000;
-    color: #fff;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.profile-details {
-    margin-bottom: 20px;
-}
-
-.profile-details p {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #333;
-}
-
-.status-section h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.status-text {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 15px;
-    line-height: 1.4;
-}
-
-.status-images {
-    display: flex;
-    gap: 10px;
-}
-
-.image-icon {
-    width: 30px;
-    height: 30px;
-    background: #fff;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-}
-
-/* Footer */
-footer {
-    background: #000;
-    color: #fff;
-    padding: 60px 0 40px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-.footer-left {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.footer-images {
-    display: flex;
-    gap: 12px;
-    margin: 20px 0;
-}
-
-.footer-image {
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
-    padding: 6px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.footer-image-2 {
-    width: 32px;
-    height: 32px;
-    padding: 2px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.footer-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.footer-image:hover img {
-    transform: scale(1.05);
-}
-
-.footer-logo {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon {
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-        .social-icon:hover {
-            opacity: 0.7;
-        }
-
-        /* Footer links */
-        .footer-link {
-            color: #fff;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .footer-link:hover {
-            opacity: 0.8;
-        }
-
-.footer-right {
-    flex: 1;
-    max-width: 500px;
-}
-
-.footer-right p {
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-left {
-        width: 100%;
-        height: 100vh;
-        padding: 30px 20px;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .section-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .section-content.reverse {
-        flex-direction: column;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .footer-images {
-        gap: 8px;
-    }
-    
-    .download-buttons {
-        justify-content: center;
-    }
-    
-    .phone-frame {
-        width: 240px;
-        height: 480px;
-    }
-    
-    .phone-mockup img {
-        width: 280px;
-    }
-    
-    .phone-mockup img.tall {
-        width: 280px;
-        height: 576px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .text-content h2 {
-        font-size: 2rem;
-    }
-    
-    .phone-frame {
-        width: 200px;
-        height: 400px;
-    }
-    
-    .phone-mockup img {
-        width: 240px;
-    }
-    
-    .phone-mockup img.tall {
-        width: 240px;
-        height: 494px;
-    }
-    
-    .download-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .download-btn {
-        width: 200px;
-    }
-}
-
-@media (max-width: 375px) {
-    .hero-left {
-        padding: 20px 15px;
-    }
-    
-    .hero-content h1 {
-        font-size: 1.8rem;
-        line-height: 1.3;
-        margin-bottom: 1rem;
-    }
-    
-    .subtitle {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
-    
-    .text-content h2 {
-        font-size: 1.8rem;
-    }
-    
-    .text-content p {
-        font-size: 1rem;
-    }
-    
-    .download-btn {
-        width: 180px;
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-    
-    .download-btn svg {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .phone-frame {
-        width: 180px;
-        height: 360px;
-    }
-    
-    .phone-mockup img {
-        width: 220px;
-        position: relative;
-    }
-    
-    .phone-mockup img.tall {
-        width: 220px;
-        height: 453px;
-        position: relative;
-    }
-    
-    .campus-text {
-        font-size: 1.2rem;
-    }
-    
-    .footer-logo {
-        font-size: 1.8rem;
-    }
-    
-    .footer-images {
-        gap: 6px;
-    }
-    
-    .footer-image {
-        width: 28px;
-        height: 28px;
-    }
-    
-    .container {
-        padding: 0 15px;
-    }
-    
-    .section-content {
-        gap: 30px;
-    }
-    
-    .campus-life,
-    .social-feed,
-    .profile-section {
-        padding: 60px 0;
-    }
-    
-    .yellow-bar {
-        padding: 15px 0;
-    }
-    
-    footer {
-        padding: 40px 0 30px;
-    }
-}
-    </style>
+    </script>
 </head>
+
 <body>
-    <!-- Header & Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <!-- Background Map Image -->
-            <div class="hero-background">
-                <img src="https://fe-platform.xhscdn.com/platform/104101l031kia0a7rio06crss18r00000000000dl885d6" alt="Campus Map Background">
+    <div class="main">
+        <!-- 首屏 -->
+        <div class="index">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="/images/logo.svg" alt="logo">
+                </div>
+                <div class="logo-text">
+                    <img src="/images/logo-text.svg" alt="logo-text">
+                    <span class="app-text">APP</span>
+                </div>
             </div>
-            
-            <!-- Left Section - Yellow Background -->
-            <div class="hero-left">
-                <header>
-                    <a href="#" class="about-link">About us</a>
-                    <div class="header-line"></div>
-                </header>
-                
-                <div class="hero-content">
-                        <h1>100 Ways to Explore Campus –<br>
-                        From Study to Social. Pin My Campus Life.</h1>
-                    <p class="subtitle">探索校园的100种可能：从早八教室到深夜食堂，从社团活动到图书馆。
-                        <br>
-                        用地图标记你的校园生活。</p>
-                    
-                    <div class="download-buttons">
-                        <button class="download-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M17.523 15.3414c-.0441-.2966-.3965-.5469-.7954-.5469H7.2664c-.3989 0-.7513.2503-.7954.5469L6.5 17.5h11l-.9766-2.1586zM12 2.5c1.6569 0 3 1.3431 3 3 0 1.6569-1.3431 3-3 3s-3-1.3431-3-3c0-1.6569 1.3431-3 3-3z"/>
-                            </svg>
-                            Android
-                        </button>
-                        <button class="download-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                            </svg>
-                            AppStore
-                        </button>
+            <div class="map-mask">
+                <img class="map"
+                    src="https://fe-platform.xhscdn.com/platform/104101l031ljj405vlm06ggic0g30k000000000uujbj1i"
+                    alt="map">
+            </div>
+            <div class="map-mask-copy">
+                <img class="daily-map" src="/images/daily-map.svg" alt="daily-map">
+                <div class="tv pointer" onclick="handleNext('school-card')">
+                    <div class="video-wrapper">
+                        <video class="tv-video" loop muted playsinline>
+                            <source src="/media/tv-video.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
+                <img class="computer pointer"
+                    src="https://fe-platform.xhscdn.com/platform/104101l031lg21rl45m06ggic0g30k000000000qlj5qb6"
+                    alt="computer" onclick="handleNext('about')">
+                <img class="arrow-green" src="/images/arrow-green.svg" alt="arrow">
+                <img class="map-text" src="/images/map-text.svg" alt="map-text">
+            </div>
+            <div class="music-wrapper pointer" onclick="handleMusicToggle()">
+                <img class="music" src="/images/music-pause.svg" alt="play">
             </div>
         </div>
-    </section>
-
-
-   
-    <!-- Campus Life Section -->
-    <section class="campus-life">
-        <div class="container">
-            <div class="section-content">
-                <div class="text-content">
-                    <h2>Focus on Your Campus Life</h2>
-                    <p>学校最全活动地图，不再错过任何社团活动，一张地图掌握全校热点</p>
-                    <div class="arrow-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="phone-mockup">
-                   <img src="https://fe-platform.xhscdn.com/platform/104101l031kl0rkcciu06crss18r00000000000b845t42" alt="iphone" sizes="100vw">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Yellow Bar -->
-    <section class="yellow-bar">
-        <div class="container">
-            <div class="campus-pattern">
-                <span class="campus-text">Campus</span>
-                <span class="star">★</span>
-                <span class="campus-text">Campus</span>
-                <span class="star">★</span>
-                <span class="campus-text">Campus</span>
-                <span class="star">★</span>
-                <span class="campus-text">Campus</span>
-                <span class="star">★</span>
-                <span class="campus-text">Campus</span>
-                <span class="star">★</span>
-                <span class="campus-text">Campus</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Feed Section -->
-    <section class="social-feed">
-        <div class="container">
-            <div class="section-content ">
-                <div class="phone-mockup">
-                    <img src="https://fe-platform.xhscdn.com/platform/104101l031kia0a9l32e6crss18r00000000000bhbo2og" alt="iphone" sizes="100vw">
-                </div>
-                <div class="text-content">
-                    <h2>Share Your Campus Life</h2>
-                    <p>学长学姐的经验都在这，图书馆、自习室、美食地图一站配齐，大家都在用</p>
-                    <div class="arrow-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Profile Section -->
-    <section class="profile-section">
-        <div class="container">
-            <div class="section-content">
-                <div class="text-content">
-                    <h2>Connect with Your Friends</h2>
-                    <p>找干饭搭子、学习搭子、拼车搭子更轻松，地图匹配附近志同道合的人，打开校园社交新方式，在Campus里实现搭子自由</p>
-                    <div class="arrow-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="phone-mockup">
-                    <img class="tall" src="https://fe-platform.xhscdn.com/platform/104101l031kl0m8eu2o06crss18r00000000000eu18dvg" alt="iphone" sizes="100vw">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">Campus</div>
-                    <div class="footer-images">
-                        <div class="footer-image">
-                            <img src="https://fe-platform.xhscdn.com/platform/104101l031kia0a513206crss18r00000000000bcr85v2" alt="Campus Feature 1">
+        <!-- 关于 -->
+        <div class="about">
+            <div class="about-wrapper">
+                <div class="about-left">
+                    <div class="about-big-text">About</div>
+                    <div class="logo">
+                        <div class="logo-image">
+                            <img src="/images/logo.svg" alt="logo">
                         </div>
-                        <div class="footer-image">
-                            <img src="https://fe-platform.xhscdn.com/platform/104101l031kia0abfj406crss18r00000000000amv8p9e" alt="Campus Feature 2">
-                        </div>
-                        <div class="footer-image">
-                                <img src="https://fe-platform.xhscdn.com/platform/104101l031kia0aa8j006crss18r00000000000cnkqi8o" alt="Campus Feature 3">
-                        </div>
-                        <div class="footer-image">
-                            <img src="https://fe-platform.xhscdn.com/platform/104101l031kia0ac2j406crss18r00000000000cb62bjk" alt="Campus Feature 4">
+                        <div class="logo-text">
+                            <img src="/images/logo-text.svg" alt="logo-text">
                         </div>
                     </div>
                 </div>
-                <div class="footer-right">
-                    <p>开若图 科技有限公司（KairosMap Technology Co. Ltd.）</p>
-                    <p>沪ICP备2025136576号</p>
-                    <p><a class="footer-link" href="/user-agreement.html">用户协议</a> | <a class="footer-link" href="privacy.html">隐私政策</a>  | 联系我们:support@thegoodcampus.com</p>
+                <div class="about-right">
+                    <div class="about-content">
+                        100 Ways to Explore Campus – From Study to Social.<br />Pin My Campus Life.
+                    </div>
+                    <div class="about-description">
+                        探索校园的100种可能——从课堂学习、校园活动到认识新朋友，从此不迷路。<br />用地图标记你的校园生活。
+                    </div>
+                    <div class="about-btn-wrapper">
+                        <div class="about-btn pointer" onclick="window.open(`https://static.tgccdn.com/apk/campus-release.apk`)">
+                            <img src="/images/android.svg" alt="android">
+                            <span class="about-btn-text">Android</span>
+                        </div>
+                        <div class="about-btn pointer"
+                            onclick="window.open(`https://apps.apple.com/en/app/campus-%E6%A0%87%E8%AE%B0%E6%88%91%E7%9A%84%E6%A0%A1%E5%9B%AD/id6749637085`)">
+                            <img src="/images/apple.svg" alt="apple" style="margin-left: -3px;">
+                            <span class="about-btn-text" style="margin-left: 4px;">App&nbsp;Store</span>
+                        </div>
+                    </div>
+                    <div class="about-line"></div>
+                    <div class="about-compony">
+                        <div class="compony-text">
+                            <span id="cn_name">开若图科技（上海）有限公司</span>
+                        </div>
+                        <div class="compony-text">
+                            <span class="right-line">沪公网安备 31010102007319号</span>
+                            <span>沪ICP备 2023038043号-4</span>
+                        </div>
+                        <div class="compony-text">
+                            <span class="right-line pointer"
+                                onclick="window.location.href='/user-agreement.html'">用户协议</span>
+                            <span class="right-line pointer" onclick="window.location.href='/privacy.html'">隐私政策</span>
+                            <span class="right-line">儿童/青少年个人信息保护规则</span>
+                            <span>联系我们：support@thegoodcampus.com</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="close-btn pointer">
+                <img src="/images/close-yellow.svg" alt="close" onclick="handlePrev('about')">
+            </div>
         </div>
-    </footer>
+        <!-- 领取校园卡 -->
+        <div class="school-card">
+            <div class="card-content">
+                <img class="card-img"
+                    src="https://fe-platform.xhscdn.com/platform/104101l031lk10rab5e06ggic0g30k000000000pggl09e"
+                    alt="card">
+                <div class="card-text">扫码下载 Campus</div>
+                <div class="card-text">领取你的校园卡</div>
+            </div>
+            <div class="card-logo logo">
+                <div class="logo-image">
+                    <img src="/images/logo.svg" alt="logo">
+                </div>
+                <div class="logo-text">
+                    <img src="/images/logo-text.svg" alt="logo-text">
+                </div>
+            </div>
+            <div class="close-btn pointer">
+                <img src="/images/close-blue.svg" alt="close" onclick="handlePrev('school-card')">
+            </div>
+        </div>
+        <!-- 动画拖尾 -->
+        <div class="tail-wrapper">
+            <div class="animate-tail" data-index="1"></div>
+            <div class="animate-tail" data-index="2"></div>
+            <div class="animate-tail" data-index="3"></div>
+            <div class="animate-tail" data-index="4"></div>
+            <div class="animate-tail" data-index="5"></div>
+        </div>
+        <!-- 背景音乐 -->
+        <audio id="bg_music" loop preload="auto" style="display: none;">
+            <source src="/media/bgm.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        let handleNext, handlePrev, handleMusicToggle
+        window.onload = function () {
+            const mainDom = document.querySelector('.main')
+            const about = document.querySelector('.about')
+            const card = document.querySelector('.school-card')
+            const tailWrapper = document.querySelector('.tail-wrapper')
+            const tails = document.getElementsByClassName('animate-tail')
+
+            const cnName = document.querySelector('#cn_name')
+            if (window.location.host.includes('agoodcampus.com')) {
+                cnName.innerHTML = '超超世世科技（上海）有限公司'
+            }
+
+            const audio = document.querySelector('.tv-video')
+            const bgMusic = document.querySelector('#bg_music')
+            const musicDom = document.querySelector('.music')
+            let playStatus = false
+
+            handleMusicToggle = function () {
+                audio.muted = false
+                audio.volume = 1.0
+                playStatus = !playStatus
+                musicDom.src = `/images/music-${ playStatus ? 'play' : 'pause' }.svg`
+
+                if (playStatus) {
+                    bgMusic.play()
+                    audio.play()
+                } else {
+                    bgMusic.pause()
+                    audio.pause()
+                }
+            }
+
+            handleNext = function (name) {
+                // mainDom.classList.remove('min-1448')
+                mainDom.classList.add('x-hidden')
+
+                audio.pause()
+                let needAnimate = null
+                if (name === 'about') {
+                    needAnimate = about
+                    tailWrapper.classList.add('tail-blue')
+                } else {
+                    needAnimate = card
+                    tailWrapper.classList.add('tail-yellow')
+                }
+                for (let i = 0; i < tails.length; i++) {
+                    tails[i].classList.add('animate')
+                }
+                needAnimate.classList.add('animate')
+            }
+
+            handlePrev = function (name) {
+                audio.play()
+                // mainDom.classList.add('min-1448')
+                mainDom.classList.remove('x-hidden')
+                let needAnimate = name === 'about' ? about : card
+
+                for (let i = 0; i < tails.length; i++) {
+                    tails[i].classList.remove('animate')
+                }
+                needAnimate.classList.remove('animate')
+
+                setTimeout(() => {
+                    if (name === 'about') {
+                        tailWrapper.classList.remove('tail-blue')
+                    } else {
+                        tailWrapper.classList.remove('tail-yellow')
+                    }
+                }, 500)
+            }
+        }
+    </script>
 </body>
-</html> 
+
+</html>
