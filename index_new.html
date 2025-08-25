@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus - 探索校园的100种可能</title>
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="icon" type="image/png"
+        href="https://fe-platform.xhscdn.com/platform/104101l031kia0a9m2o06crss18r00000000000c6ettkq">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <script>
+        // 移动端
+        if (window.innerWidth <= 768) {
+            window.location.href = `${window.location.origin}/mobile/index.html`;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <!-- 首屏 -->
+        <div class="index">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="/images/logo.svg" alt="logo">
+                </div>
+                <div class="logo-text">
+                    <img src="/images/logo-text.svg" alt="logo-text">
+                </div>
+            </div>
+            <div class="map-mask">
+                <img class="map"
+                    src="https://fe-platform.xhscdn.com/platform/104101l031ljj405vlm06ggic0g30k000000000uujbj1i"
+                    alt="map">
+            </div>
+            <div class="map-mask-copy">
+                <img class="daily-map" src="/images/daily-map.svg" alt="daily-map">
+                <div class="tv pointer" onclick="handleNext('school-card')">
+                    <div class="video-wrapper">
+                        <video class="tv-video" loop muted playsinline>
+                            <source src="/media/tv-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <img class="computer pointer"
+                    src="https://fe-platform.xhscdn.com/platform/104101l031lg21rl45m06ggic0g30k000000000qlj5qb6"
+                    alt="computer" onclick="handleNext('about')">
+                <img class="arrow-green" src="/images/arrow-green.svg" alt="arrow">
+                <img class="map-text" src="/images/map-text.svg" alt="map-text">
+            </div>
+            <div class="music-wrapper pointer" onclick="handleMusicToggle()">
+                <img class="music" src="/images/music-pause.svg" alt="play">
+            </div>
+        </div>
+        <!-- 关于 -->
+        <div class="about">
+            <div class="about-wrapper">
+                <div class="about-left">
+                    <div class="about-big-text">About</div>
+                    <div class="logo">
+                        <div class="logo-image">
+                            <img src="/images/logo.svg" alt="logo">
+                        </div>
+                        <div class="logo-text">
+                            <img src="/images/logo-text.svg" alt="logo-text">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <div class="about-content">
+                        100 Ways to Explore Campus – From Study to Social.<br />Pin My Campus Life
+                    </div>
+                    <div class="about-description">
+                        探索校园的100种可能——从学习到社交，从此不迷路。<br />用地图标记你的校园生活。
+                    </div>
+                    <div class="about-btn-wrapper">
+                        <div class="about-btn pointer" onclick="window.open(`https://static.tgccdn.com/apk/campus-release.apk`)">
+                            <img src="/images/android.svg" alt="android">
+                            <span class="about-btn-text">Android</span>
+                        </div>
+                        <div class="about-btn pointer"
+                            onclick="window.open(`https://apps.apple.com/en/app/campus-%E6%A0%87%E8%AE%B0%E6%88%91%E7%9A%84%E6%A0%A1%E5%9B%AD/id6749637085`)">
+                            <img src="/images/apple.svg" alt="apple">
+                            <span class="about-btn-text" style="margin-left: 4px;">AppStore</span>
+                        </div>
+                    </div>
+                    <div class="about-line"></div>
+                    <div class="about-compony">
+                        <div class="compony-text">
+                            <span id="cn_name">开若图科技（上海）有限公司</span>
+                        </div>
+                        <div class="compony-text">
+                            <span class="right-line">沪公网安备 31010102007319号</span>
+                            <span>沪ICP备 2023038043号-4</span>
+                        </div>
+                        <div class="compony-text">
+                            <span class="right-line pointer"
+                                onclick="window.location.href='/user-agreement.html'">用户协议</span>
+                            <span class="right-line pointer" onclick="window.location.href='/privacy.html'">隐私政策</span>
+                            <span class="right-line">儿童/青少年个人信息保护规则</span>
+                            <span>联系我们：support@thegoodcampus.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close-btn pointer">
+                <img src="/images/close-yellow.svg" alt="close" onclick="handlePrev('about')">
+            </div>
+        </div>
+        <!-- 领取校园卡 -->
+        <div class="school-card">
+            <div class="card-content">
+                <img class="card-img"
+                    src="https://fe-platform.xhscdn.com/platform/104101l031lg2g6n3le06ggic0g30k000000000ukivpj2"
+                    alt="card">
+                <div class="card-text">扫码下载 Campus</div>
+                <div class="card-text">领取你的校园卡</div>
+            </div>
+            <div class="card-logo logo">
+                <div class="logo-image">
+                    <img src="/images/logo.svg" alt="logo">
+                </div>
+                <div class="logo-text">
+                    <img src="/images/logo-text.svg" alt="logo-text">
+                </div>
+            </div>
+            <div class="close-btn pointer">
+                <img src="/images/close-blue.svg" alt="close" onclick="handlePrev('school-card')">
+            </div>
+        </div>
+        <!-- 动画拖尾 -->
+        <div class="tail-wrapper">
+            <div class="animate-tail" data-index="1"></div>
+            <div class="animate-tail" data-index="2"></div>
+            <div class="animate-tail" data-index="3"></div>
+            <div class="animate-tail" data-index="4"></div>
+            <div class="animate-tail" data-index="5"></div>
+        </div>
+        <!-- 背景音乐 -->
+        <audio id="bg_music" loop preload="auto" style="display: none;">
+            <source src="/media/bgm.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        let handleNext, handlePrev, handleMusicToggle
+        window.onload = function () {
+            const mainDom = document.querySelector('.main')
+            const about = document.querySelector('.about')
+            const card = document.querySelector('.school-card')
+            const tailWrapper = document.querySelector('.tail-wrapper')
+            const tails = document.getElementsByClassName('animate-tail')
+
+            const cnName = document.querySelector('#cn_name')
+            if (window.location.host.includes('agoodcampus.com')) {
+                cnName.innerHTML = '超超世世科技（上海）有限公司'
+            }
+
+            const audio = document.querySelector('.tv-video')
+            const bgMusic = document.querySelector('#bg_music')
+            const musicDom = document.querySelector('.music')
+            let playStatus = false
+
+            handleMusicToggle = function () {
+                audio.muted = false
+                audio.volume = 1.0
+                playStatus = !playStatus
+                musicDom.src = `/images/music-${ playStatus ? 'play' : 'pause' }.svg`
+
+                if (playStatus) {
+                    bgMusic.play()
+                    audio.play()
+                } else {
+                    bgMusic.pause()
+                    audio.pause()
+                }
+            }
+
+            handleNext = function (name) {
+                // mainDom.classList.remove('min-1448')
+                mainDom.classList.add('x-hidden')
+
+                audio.pause()
+                let needAnimate = null
+                if (name === 'about') {
+                    needAnimate = about
+                    tailWrapper.classList.add('tail-blue')
+                } else {
+                    needAnimate = card
+                    tailWrapper.classList.add('tail-yellow')
+                }
+                for (let i = 0; i < tails.length; i++) {
+                    tails[i].classList.add('animate')
+                }
+                needAnimate.classList.add('animate')
+            }
+
+            handlePrev = function (name) {
+                audio.play()
+                // mainDom.classList.add('min-1448')
+                mainDom.classList.remove('x-hidden')
+                let needAnimate = name === 'about' ? about : card
+
+                for (let i = 0; i < tails.length; i++) {
+                    tails[i].classList.remove('animate')
+                }
+                needAnimate.classList.remove('animate')
+
+                setTimeout(() => {
+                    if (name === 'about') {
+                        tailWrapper.classList.remove('tail-blue')
+                    } else {
+                        tailWrapper.classList.remove('tail-yellow')
+                    }
+                }, 500)
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('/font/Avenir.ttc') format('truetype-collection'),
+        url('/font/Avenir.ttc') format('truetype');
+    font-style: normal;
+    font-display: swap;
+    /* 优化字体加载性能 */
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+/* 首屏 */
+.index {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #FFF932;
+}
+
+.index-header {
+    padding: 0.305rem;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo-image {
+    display: flex;
+    width: 0.8rem;
+    height: 0.8rem;
+    padding: 0.086rem 0.1325rem 0.0932rem 0.103rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.24rem;
+    border: 1px solid #080808;
+}
+
+.logo-image img {
+    width: 0.5rem;
+}
+
+.logo-text-wrapper {
+    margin: 0.13rem 0 0 0.229rem;
+}
+
+.logo-text-wrapper img {
+    display: block;
+    width: 1.19rem;
+}
+
+.logo-text {
+    display: block;
+    font-size: 0.21rem;
+    line-height: 0.305rem;
+}
+
+.map-mask,
+.map-mask-copy {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 1.527rem;
+    bottom: 1.145rem;
+}
+
+.map-mask {
+    overflow: hidden;
+}
+
+.map {
+    position: absolute;
+    width: 8.8rem;
+    left: -0.831rem;
+    bottom: 0.28rem;
+}
+
+.map-bg-up,
+.map-bg-down {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.map-bg-up {
+    top: 0;
+}
+
+.map-bg-down {
+    bottom: 0;
+}
+
+.tv {
+    position: absolute;
+    width: 2.69rem;
+    height: 1.925rem;
+    bottom: -0.534rem;
+    left: 0.381rem;
+    background-image: url('https://fe-platform.xhscdn.com/platform/104101l031ljo8o6sli06ggic0g30k000000000tpmsnjk');
+    background-size: 100% 100%;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 42%;
+    top: 30.1%;
+    left: 26%;
+    height: 43.6%;
+    overflow: hidden;
+}
+
+.tv-video {
+    position: absolute;
+    left: -70%;
+    top: -79%;
+    width: 250%;
+    height: 250%;
+}
+
+.computer {
+    position: absolute;
+    width: 1.85rem;
+    top: -0.663rem;
+    right: 0.477rem;
+}
+
+.music-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0.343rem;
+    right: 0.267rem;
+    width: 0.42rem;
+    height: 0.42rem;
+    border-radius: 50%;
+    border: 0.028rem solid #000;
+}
+
+.music {
+    width: 0.248rem;
+}
+
+/* 关于/学校卡 */
+.about,
+.school-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-370vh);
+    z-index: 999;
+    transition: all ease 0.5s;
+}
+
+/* 关于 */
+.about {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #FFF 5.79%, #F5EF24 84.87%);
+    box-shadow: 0 0.076rem 0.076rem 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(0.19rem);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.about-big-text {
+    color: #000;
+    font-family: "Avenir";
+    font-size: 0.343rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 0.572rem;
+    letter-spacing: -1px;
+    padding: 0.382rem;
+}
+
+.about-content {
+    width: 6.603rem;
+    margin: 2.385rem auto 0;
+    text-align: center;
+    font-family: 'Avenir';
+    font-size: 0.534rem;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 0.687rem;
+    letter-spacing: -1px;
+}
+
+.about-description {
+    width: 6.603rem;
+    margin: 0.458rem auto 0;
+    text-align: center;
+    font-size: 0.267rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.458rem;
+}
+
+.about-btn-wrapper {
+    margin-top: 1.221rem;
+}
+
+.about-btn {
+    display: flex;
+    width: 3.587rem;
+    height: 0.954rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.23rem;
+    background: #000;
+    color: #FFF;
+    margin: 0 auto 0.305rem;
+}
+
+.about-btn img {
+    width: 0.458rem;
+    height: 0.458rem;
+}
+
+.about-btn-text {
+    font-size: 0.305rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 0.458rem;
+    margin-left: 0.191rem;
+}
+
+.about-next {
+    margin-top: 1.8rem;
+    text-align: center;
+}
+
+.about-compony {
+    width: 6.87rem;
+    margin: 1.813rem auto 0;
+}
+
+.compony-text {
+    margin-bottom: 0.152rem;
+    font-size: 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.382rem;
+}
+
+.compony-text:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0.649rem;
+}
+
+.compony-text span {
+    font-size: 0.229rem;
+}
+
+.right-line {
+    display: inline-block;
+    position: relative;
+    margin-right: 0.324rem;
+}
+
+.right-line::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -0.165rem;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 0.229rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    width: 0.553rem;
+    height: 0.553rem;
+    top: 0.382rem;
+    right: 0.382rem;
+}
+
+/* 学校卡 */
+.school-card {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    background: linear-gradient(180deg, #FDFEFD 0%, #2D88FF 100%);
+}
+
+.card-content {
+    width: 7.06rem;
+    margin: -0.954rem auto 0;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-text {
+    text-align: center;
+    font-size: 0.267rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 0.42rem;
+}
+
+.card-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.916rem;
+}
+
+.card-logo .logo-image {
+    width: 0.534rem;
+    height: 0.534rem;
+    border-radius: 0.152rem;
+    background: #FFF932;
+}
+
+.card-logo .logo-image img {
+    width: 0.28rem;
+}
+
+.card-logo .logo-text img {
+    height: 0.229rem;
+    margin: 0.172rem 0 0 0.153rem;
+}
+
+/* 动画 */
+.animate-tail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all ease 0.5s;
+}
+
+.tail-blue .animate-tail {
+    background: rgba(70, 164, 246, 0.2);
+}
+
+.tail-yellow .animate-tail {
+    background: rgba(255, 249, 50, 0.7);
+}
+
+.animate-tail[data-index="1"] {
+    transform: translateY(-320vh);
+}
+
+.animate-tail[data-index="2"] {
+    transform: translateY(-270vh);
+}
+
+.animate-tail[data-index="3"] {
+    transform: translateY(-220vh);
+}
+
+.animate-tail[data-index="4"] {
+    transform: translateY(-170vh);
+}
+
+.animate-tail[data-index="5"] {
+    transform: translateY(-120vh);
+}
+
+.animate,
+.animate[data-index] {
+    transform: translateY(0);
+}

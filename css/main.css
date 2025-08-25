@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('/font/Avenir.ttc') format('truetype-collection'),
+        url('/font/Avenir.ttc') format('truetype');
+    font-style: normal;
+    font-display: swap;
+    /* 优化字体加载性能 */
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+.min-1448 {
+    min-width: 1448px;
+}
+
+.x-hidden {
+    overflow-x: hidden;
+}
+
+/* 首屏 */
+.index {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #F5EF24;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 28px;
+    z-index: 1;
+}
+
+.logo-image {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    padding: 4.5px 6.943px 4.886px 5.4px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #080808;
+}
+
+.logo-image img {
+    width: 22px;
+}
+
+.logo-text {
+    display: flex;
+    height: 36px;
+    align-items: center;
+    margin-left: 11.5px;
+}
+
+.logo-text img {
+    height: 23.11px;
+    margin-top: 5px;
+}
+
+.music-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.music {
+    width: 18px;
+}
+
+.map-mask,
+.map-mask-copy {
+    position: absolute;
+    width: 90%;
+    aspect-ratio: 4173/2103;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.map-mask {
+    overflow: hidden;
+}
+
+.map-mask-copy {
+    background-image: url('https://fe-platform.xhscdn.com/platform/104101l031ljg33u9lo06ggic0g30k000000000s8hvqqs');
+    background-size: 100% 100%;
+}
+
+.map {
+    position: absolute;
+    left: -6.8%;
+    bottom: 0%;
+    width: 109%;
+}
+
+.daily-map {
+    position: absolute;
+    top: 4.7%;
+    left: 0.54%;
+    width: 10.236%;
+}
+
+.tv {
+    position: absolute;
+    top: 65.9%;
+    left: -4.8%;
+    width: 18.2%;
+    aspect-ratio: 900/675;
+    background-image: url('https://fe-platform.xhscdn.com/platform/104101l031ljo8o6sli06ggic0g30k000000000tpmsnjk');
+    background-size: 100% 100%;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 42%;
+    top: 30.1%;
+    left: 26%;
+    height: 43.6%;
+    overflow: hidden;
+}
+
+.tv-video {
+    position: absolute;
+    left: -70%;
+    top: -79%;
+    width: 250%;
+    height: 250%;
+}
+
+.computer {
+    position: absolute;
+    top: 26.14%;
+    right: -2%;
+    width: 12.43%;
+}
+
+.arrow-green {
+    position: absolute;
+    top: 19.83%;
+    right: -0.8%;
+    width: 3.44%;
+}
+
+.map-text {
+    position: absolute;
+    top: 0%;
+    right: 8%;
+    width: 20.37%;
+}
+
+/* 关于/学校卡 */
+.about,
+.school-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-370vh);
+    z-index: 999;
+    transition: all ease 0.5s;
+}
+
+.about {
+    
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    min-height: 100%;
+    max-width: 2000px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(245, 239, 36, 0.92) 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(13px);
+}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 135px;
+}
+
+.about-right {
+    width: 55.56%;
+    margin-right: 85px;
+    padding-bottom: 35px;
+}
+
+.about-big-text {
+    font-family: "Avenir";
+    color: #000;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-top: 135px;
+    letter-spacing: -1px;
+}
+
+.about-left .logo {
+    margin-bottom: 110px;
+    padding: 0;
+}
+
+.about-left .logo .logo-image {
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: none;
+}
+
+.about-left .logo .logo-image img {
+    height: 32px;
+}
+
+.about-left .logo .logo-text img {
+    width: 103px;
+    height: auto;
+}
+
+.about-content {
+    font-family: 'Avenir';
+    color: #000;
+    max-width: 1000px;
+    font-size: 54px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 60px;
+    /* letter-spacing: -1px; */
+    margin-top: calc(220/824*100vh);
+}
+
+.about-description {
+    font-family: "PingFang SC";
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+.about-btn-wrapper {
+    display: flex;
+}
+
+.about-btn {
+    display: flex;
+    width: 160px;
+    height: 54px;
+    padding: 11px 24px;
+    align-items: center;
+    color: #fff;
+    border-radius: 12px;
+    background: #000;
+    margin: 32px 30px 0 0
+}
+
+.about-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.about-btn-text {
+    margin-left: 12px;
+    font-family: "PingFang SC";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about-line {
+    width: 100%;
+    height: 1px;
+    background: #000;
+    margin-top: 60px;
+}
+
+.about-compony {
+    margin-top: 60px;
+}
+
+.compony-text {
+    font-size: 0;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+
+.compony-text span {
+    font-size: 14px;
+}
+
+.right-line {
+    display: inline-block;
+    position: relative;
+    margin-right: 32px;
+}
+
+.right-line::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -17px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 14px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 40px;
+    right: 40px;
+}
+
+.close-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 学校卡 */
+.school-card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(45, 136, 255, 0.99) 100%);
+}
+
+.card-content {
+    width: 90%;
+    margin: -100px auto 0;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-text {
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.card-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 4px;
+}
+
+.card-logo .logo-image {
+    background: #F5EF24;
+}
+
+.card-logo .logo-text img {
+    height: 18px;
+    margin-top: 3px;
+}
+
+/* 动画 */
+.animate-tail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all ease 0.5s;
+}
+
+.tail-blue .animate-tail {
+    background: rgba(70, 164, 246, 0.2);
+}
+
+.tail-yellow .animate-tail {
+    background: rgba(255, 249, 50, 0.7);
+}
+
+.animate-tail[data-index="1"] {
+    transform: translateY(-320vh);
+}
+
+.animate-tail[data-index="2"] {
+    transform: translateY(-270vh);
+}
+
+.animate-tail[data-index="3"] {
+    transform: translateY(-220vh);
+}
+
+.animate-tail[data-index="4"] {
+    transform: translateY(-170vh);
+}
+
+.animate-tail[data-index="5"] {
+    transform: translateY(-120vh);
+}
+
+.animate,
+.animate[data-index] {
+    transform: translateY(0);
+}
