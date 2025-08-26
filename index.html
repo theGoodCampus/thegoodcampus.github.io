@@ -77,7 +77,8 @@
                         探索校园的100种可能——从课堂学习、校园活动到认识新朋友，从此不迷路。<br />用地图标记你的校园生活。
                     </div>
                     <div class="about-btn-wrapper">
-                        <div class="about-btn pointer" onclick="window.open(`https://static.tgccdn.com/apk/campus-release.apk`)">
+                        <div class="about-btn pointer"
+                            onclick="window.open(`https://static.tgccdn.com/apk/campus-release.apk`)">
                             <img src="/images/android.svg" alt="android">
                             <span class="about-btn-text">Android</span>
                         </div>
@@ -116,7 +117,7 @@
                 <img class="card-img"
                     src="https://fe-platform.xhscdn.com/platform/104101l031lk10rab5e06ggic0g30k000000000pggl09e"
                     alt="card">
-                <div class="card-text">扫码下载 Campus</div>
+                <div class="card-text">扫码下载 Campus App</div>
                 <div class="card-text">领取你的校园卡</div>
             </div>
             <div class="card-logo logo">
@@ -158,6 +159,14 @@
                 cnName.innerHTML = '超超世世科技（上海）有限公司'
             }
 
+            // 检测是否为macOS
+            const isMacOS = navigator.platform.toUpperCase().indexOf('MAC') >= 0
+
+            if (!isMacOS) {
+                // 非mac隐藏滚动条
+                about.classList.add('scroll-bar-hide')
+            }
+
             const audio = document.querySelector('.tv-video')
             const bgMusic = document.querySelector('#bg_music')
             const musicDom = document.querySelector('.music')
@@ -167,7 +176,7 @@
                 audio.muted = false
                 audio.volume = 1.0
                 playStatus = !playStatus
-                musicDom.src = `/images/music-${ playStatus ? 'play' : 'pause' }.svg`
+                musicDom.src = `/images/music-${playStatus ? 'play' : 'pause'}.svg`
 
                 if (playStatus) {
                     bgMusic.play()
