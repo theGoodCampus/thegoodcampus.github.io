@@ -7,7 +7,17 @@
                 "paths": [
                     "/app/*",
                     "/qq_conn/102807360/*",
-                    "/feed/*"
+                    "/feed/*",
+                    "/post/*",
+                    "/share/*",
+                    "/login/*",
+                    "/onBoarding/*",
+                    "/message/*",
+                    "/chat/*",
+                    "/announce/*",
+                    "/messageBoard/*",
+                    "/scanner/*",
+                    "/rn/*"    
                 ]
             }
         ]
