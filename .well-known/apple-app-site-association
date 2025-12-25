@@ -5,6 +5,7 @@
             {
                 "appIDs": [ "CB54VU248U.com.kairuotu.campus" ],
                 "paths": [
+                    "/main",
                     "/app/*",
                     "/qq_conn/102807360/*",
                     "/feed/*",
@@ -17,7 +18,7 @@
                     "/announce/*",
                     "/messageBoard/*",
                     "/scanner/*",
-                    "/rn/*"    
+                    "/rn/*" 
                 ]
             }
         ]
