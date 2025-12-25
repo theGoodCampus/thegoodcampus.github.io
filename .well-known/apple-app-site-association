@@ -11,14 +11,11 @@
                     "/feed/*",
                     "/post/*",
                     "/share/*",
-                    "/login/*",
                     "/onBoarding/*",
                     "/message/*",
                     "/chat/*",
-                    "/announce/*",
-                    "/messageBoard/*",
-                    "/scanner/*",
-                    "/rn/*" 
+                    "/rn/*" ,
+                    "/groupchat/*"
                 ]
             }
         ]
