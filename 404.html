@@ -104,11 +104,26 @@
     </footer>
   </main>
   <script>
-    // 解析 universal_link 并跳转
+    // 按设备区分跳转：
+    // - iOS：跳到下载页（保持现有逻辑）
+    // - Android：将当前 URL 转为 deeplink，例如
+    //   https://thegoodcampus.com/feed/detail?id=7587 -> campusx://feed/detail?id=7587
     (function() {
-      const YYB_URL = 'https://a.app.qq.com/o/simple.jsp?pkgname=com.kairuotu.campus'
-      const downloadPage = 'https://s.tgccdn.com/download'
-      window.location.replace(downloadPage);
+      const downloadPage = 'https://s.tgccdn.com/download';
+      const ua = navigator.userAgent || '';
+      const isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+      if (isIOS) {
+        window.location.replace(downloadPage);
+        return;
+      }
+
+      // Android（或其他）生成 deeplink
+      const path = (window.location.pathname || '').replace(/^\/?/, ''); // 去掉前导 /
+      const query = window.location.search || '';
+      const hash = window.location.hash || '';
+      const deeplink = 'campusx://' + path + query + hash;
+      window.location.replace(deeplink);
     })();
   </script>
 </body>
