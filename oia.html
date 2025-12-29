@@ -4,6 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Campus - 页面未找到</title>
+  <script>
+    // 解析 universal_link 并跳转
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var raw = params.get('universal_link');
+      if (!raw) return;
+      var link = raw;
+      try { link = decodeURIComponent(raw); } catch (e) {}
+      // 仅允许 http/https，避免意外 scheme
+      if (!/^https?:\/\//i.test(link)) return;
+      window.location.replace(link);
+    })();
+  </script>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -31,7 +44,7 @@
       align-items: center;
       justify-content: center;
       background: rgb(254, 249, 80);
-      color: #fff;
+      color: #000;
       border-radius: 12px;
       padding: 10px 16px;
       font-weight: 700;
